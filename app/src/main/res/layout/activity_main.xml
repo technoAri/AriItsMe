@@ -61,9 +61,6 @@
             android:background="#00FF00"
             android:layout_alignParentEnd="true"/>
 
-
     </LinearLayout>
-
-
 
 </RelativeLayout>
