@@ -1,10 +1,12 @@
-package com.example.hppc.ariitsme;
+package com.example.hppc.ariitsme.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.hppc.ariitsme.R;
 
 public class MainActivity extends AppCompatActivity {
 
