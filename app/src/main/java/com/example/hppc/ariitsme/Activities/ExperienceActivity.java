@@ -7,6 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -15,6 +20,8 @@ import com.example.hppc.ariitsme.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.app.PendingIntent.getActivity;
 
 public class ExperienceActivity extends FragmentActivity {
 
@@ -26,6 +33,16 @@ public class ExperienceActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_experience);
 
+        //View view = inflater.inflate(R.layout.fragment, container, false);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//
+//        //set toolbar appearance
+//        //toolbar.setBackground(R.color.material_blue_grey_800);
+//
+//        //for crate home button
+//        AppCompatActivity activity = (AppCompatActivity)getApplicationContext();
+//        activity.setSupportActionBar(toolbar);
+//        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         List<Fragment> fragments = getFragments();
 
         pageAdapter = new MyPageAdapter(getSupportFragmentManager(), fragments);
@@ -81,5 +98,18 @@ public class ExperienceActivity extends FragmentActivity {
             return this.fragments.size();
         }
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
