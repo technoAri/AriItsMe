@@ -1,6 +1,7 @@
 package com.example.hppc.ariitsme.Activities;
 
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -23,7 +24,7 @@ import java.util.List;
 
 import static android.app.PendingIntent.getActivity;
 
-public class ExperienceActivity extends FragmentActivity {
+public class ExperienceActivity extends AppCompatActivity {
 
     MyPageAdapter pageAdapter;
     TextView tv1, tv2;
@@ -32,17 +33,13 @@ public class ExperienceActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_experience);
-
-        //View view = inflater.inflate(R.layout.fragment, container, false);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//
-//        //set toolbar appearance
-//        //toolbar.setBackground(R.color.material_blue_grey_800);
-//
-//        //for crate home button
-//        AppCompatActivity activity = (AppCompatActivity)getApplicationContext();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activities);
+        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activities);
+//        AppCompatActivity activity = (AppCompatActivity) getActivity();
 //        activity.setSupportActionBar(toolbar);
 //        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         List<Fragment> fragments = getFragments();
 
         pageAdapter = new MyPageAdapter(getSupportFragmentManager(), fragments);

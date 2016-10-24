@@ -19,7 +19,7 @@ import com.example.hppc.ariitsme.R;
 public class HomeScreenActivity extends AppCompatActivity {
 
     private String[] mNavigationDrawerItemTitles;
-    private DrawerLayout mDrawerLayout;
+    public static DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
 
     Button menuButton;
