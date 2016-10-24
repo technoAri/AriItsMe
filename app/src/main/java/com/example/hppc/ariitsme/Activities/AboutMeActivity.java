@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hppc.ariitsme.R;
@@ -17,12 +18,14 @@ import com.example.hppc.ariitsme.R;
 public class AboutMeActivity extends AppCompatActivity {
 
     Button abutMeNextBtn, backButton;
+    TextView tvTitleIntoolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activities);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(null);
 
         abutMeNextBtn = (Button) findViewById(R.id.AboutMeNxtBtn);
 //        abutMeNextBtn.setOnClickListener(new View.OnClickListener() {
@@ -37,12 +40,16 @@ public class AboutMeActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(AboutMeActivity.this, HomeScreenActivity.class);
+                finish();
+            }
+        });
+
+        tvTitleIntoolbar = (TextView) findViewById(R.id.tvTitletoolbar2);
+        tvTitleIntoolbar.setText("About Me");
+        //Intent intent=new Intent(AboutMeActivity.this, HomeScreenActivity.class);
 //                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 //                //intent.setClassName(AboutMeActivity.this, HomeScreenActivity.class);
 //                startActivity(intent);
-            }
-        });
 //        menuButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

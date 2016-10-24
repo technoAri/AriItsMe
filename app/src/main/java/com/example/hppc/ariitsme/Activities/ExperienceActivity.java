@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.hppc.ariitsme.Fragments.MyFragment;
@@ -27,7 +28,8 @@ import static android.app.PendingIntent.getActivity;
 public class ExperienceActivity extends AppCompatActivity {
 
     MyPageAdapter pageAdapter;
-    TextView tv1, tv2;
+    TextView tv1, tv2, tvTitleIntoolbar;
+    Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +37,21 @@ public class ExperienceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_experience);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activities);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(null);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activities);
 //        AppCompatActivity activity = (AppCompatActivity) getActivity();
 //        activity.setSupportActionBar(toolbar);
 //        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        backButton = (Button)findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        tvTitleIntoolbar = (TextView) findViewById(R.id.tvTitletoolbar2);
+        tvTitleIntoolbar.setText("Experience");
 
         List<Fragment> fragments = getFragments();
 

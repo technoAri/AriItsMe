@@ -17,6 +17,18 @@
             android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_list_white" />
+
+        <TextView
+            android:id="@+id/tvNametoolbar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arindam Ganguly"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:textSize="20dp"
+            android:textColor="#FCFAFA"
+            android:textStyle="bold"/>
     </android.support.v7.widget.Toolbar>
 
 </LinearLayout>
