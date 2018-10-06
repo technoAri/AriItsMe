@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thanks for showing your interest and coming inside. Hope you will be happy seeing this. Please click on the menu button on the top left corner of the toolbar."
-            android:padding="5dp"
+            android:padding="10dp"
             android:layout_margin="5dp"/>
         <TextView
             android:layout_width="wrap_content"
