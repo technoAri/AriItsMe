@@ -27,7 +27,7 @@ public class AboutMeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
 
-        abutMeNextBtn = (Button) findViewById(R.id.AboutMeNxtBtn);
+        //abutMeNextBtn = (Button) findViewById(R.id.AboutMeNxtBtn);
 //        abutMeNextBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
